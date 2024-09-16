@@ -1,0 +1,161 @@
+\hypertarget{class_bin_tree}{}\section{Referencia de la plantilla de la Clase Bin\+Tree$<$ T $>$}
+\label{class_bin_tree}\index{Bin\+Tree$<$ T $>$@{Bin\+Tree$<$ T $>$}}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{Bin\+Tree} ()
+\item 
+\hyperlink{class_bin_tree_a1ab686e0bcf990093ff91fe71744c1a4}{Bin\+Tree} (const T \&x)
+\item 
+\hyperlink{class_bin_tree_adb7eeff76d08130c943b36af215eb521}{Bin\+Tree} (const T \&x, const \hyperlink{class_bin_tree}{Bin\+Tree} \&\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}, const \hyperlink{class_bin_tree}{Bin\+Tree} \&\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right})
+\item 
+bool \hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty} () const
+\item 
+\hyperlink{class_bin_tree}{Bin\+Tree} \hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left} () const
+\item 
+\hyperlink{class_bin_tree}{Bin\+Tree} \hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right} () const
+\item 
+const T \& \hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Bin\+Tree$<$ T $>$}
+
+
+
+Definición en la línea 9 del archivo bintree.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}\label{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}} 
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::\hyperlink{class_bin_tree}{Bin\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 38 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+39     :   p(\textcolor{keyword}{nullptr})
+40     \{   \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bin_tree_a1ab686e0bcf990093ff91fe71744c1a4}\label{class_bin_tree_a1ab686e0bcf990093ff91fe71744c1a4}} 
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::\hyperlink{class_bin_tree}{Bin\+Tree} (\begin{DoxyParamCaption}\item[{const T \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 43 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+43                          \{
+44         p = make\_shared<Node>(x, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});
+45     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bin_tree_adb7eeff76d08130c943b36af215eb521}\label{class_bin_tree_adb7eeff76d08130c943b36af215eb521}} 
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::\hyperlink{class_bin_tree}{Bin\+Tree} (\begin{DoxyParamCaption}\item[{const T \&}]{x,  }\item[{const \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$ \&}]{left,  }\item[{const \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$ \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 48 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+48                                                                     \{
+49         p = make\_shared<Node>(x, left.p, right.p);
+50     \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}\label{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}} 
+\index{Bin\+Tree@{Bin\+Tree}!empty@{empty}}
+\index{empty@{empty}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 53 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+53                         \{
+54         \textcolor{keywordflow}{return} not p;
+55     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}\label{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}} 
+\index{Bin\+Tree@{Bin\+Tree}!left@{left}}
+\index{left@{left}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_bin_tree}{Bin\+Tree} \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 58 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+58                           \{
+59         assert(not \hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}());
+60         \textcolor{keywordflow}{return} \hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}(p->left);
+61     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}\label{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}} 
+\index{Bin\+Tree@{Bin\+Tree}!right@{right}}
+\index{right@{right}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{right()}{right()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_bin_tree}{Bin\+Tree} \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 64 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+64                            \{
+65         assert(not \hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}());
+66         \textcolor{keywordflow}{return} \hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}(p->right);
+67     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}\label{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}} 
+\index{Bin\+Tree@{Bin\+Tree}!value@{value}}
+\index{value@{value}!Bin\+Tree@{Bin\+Tree}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const T\& \hyperlink{class_bin_tree}{Bin\+Tree}$<$ T $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 70 del archivo bintree.\+hh.
+
+
+\begin{DoxyCode}
+70                             \{
+71         assert(not \hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}());
+72         \textcolor{keywordflow}{return} p->x;
+73     \}
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bintree_8hh}{bintree.\+hh}\end{DoxyCompactItemize}

@@ -1,0 +1,346 @@
+\hypertarget{class_jugador}{}\section{Referencia de la Clase Jugador}
+\label{class_jugador}\index{Jugador@{Jugador}}
+
+
+Representa un jugador del cicuito.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a69ab40db4a82c1b656895631b9949cbc}{consultar\+\_\+pos} () const
+\begin{DoxyCompactList}\small\item\em Indica la posicíon en el ranking del jugador. \end{DoxyCompactList}\item 
+void \hyperlink{class_jugador_af77bc217af6013d9e57cab34dd03921c}{modificar\+\_\+pos} (int i)
+\begin{DoxyCompactList}\small\item\em Modifica la posición en el ranking del jugador. \end{DoxyCompactList}\item 
+void \hyperlink{class_jugador_a241e7729a48da6c6d94ef51326a45a18}{datos\+\_\+partido} (bool ganado, int setg, int setp, int juegog, int juegop)
+\begin{DoxyCompactList}\small\item\em Actualiza las estadísticas segun los datos de un partido. \end{DoxyCompactList}\item 
+void \hyperlink{class_jugador_a5e1cd15a764a285556e35257209a2c8c}{torneo\+\_\+disputado} ()
+\begin{DoxyCompactList}\small\item\em Actualiza los torneos disputados. \end{DoxyCompactList}\item 
+void \hyperlink{class_jugador_a8bd81b77ba3d2e46bee69ea2f628f00d}{imprimir\+\_\+stats} () const
+\begin{DoxyCompactList}\small\item\em Imprime las estadísticas del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_jugador_a200ee7c036d98654af6fab08b8b909e9}{pos\+\_\+ranking}
+\begin{DoxyCompactList}\small\item\em Posicíon en el ranking. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}{torneos}
+\begin{DoxyCompactList}\small\item\em Número de torneos disputados. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_ab254a72417747985ffaf53b0508e5e31}{pg}
+\begin{DoxyCompactList}\small\item\em Partidos ganados. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}{pp}
+\begin{DoxyCompactList}\small\item\em Partidos perdidos. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a678970fa93782e3e68f939c37fff5030}{sg}
+\begin{DoxyCompactList}\small\item\em Sets ganados. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a5bed10a21acb0c437828df282050b2ab}{sp}
+\begin{DoxyCompactList}\small\item\em Sets perdidos. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a53ac73c3dc720ca6e66406b309077472}{jg}
+\begin{DoxyCompactList}\small\item\em Juegos ganados. \end{DoxyCompactList}\item 
+int \hyperlink{class_jugador_a306eb04292a1aa300a39c2464c1368fd}{jp}
+\begin{DoxyCompactList}\small\item\em Juegos perdidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un jugador del cicuito. 
+
+\hyperlink{class_jugador}{Jugador} con sus estadísricas globales(torneos disputados, número de partidos ganados y perdidos, número de sets ganados y perdidos, número de juegos ganados y perdidos) 
+
+Definición en la línea 21 del archivo Jugador.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_jugador_a232c46f75691af6210096e5972535d71}\label{class_jugador_a232c46f75691af6210096e5972535d71}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{Jugador()}{Jugador()}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un jugador. \begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un jugador todas sus estadísticas inicializadas a 0 
+\end{DoxyPostcond}
+
+
+Definición en la línea 6 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+6                 \{
+7     \hyperlink{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}{torneos} = 0;
+8     \hyperlink{class_jugador_ab254a72417747985ffaf53b0508e5e31}{pg} = 0;
+9     \hyperlink{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}{pp} = 0; 
+10     \hyperlink{class_jugador_a678970fa93782e3e68f939c37fff5030}{sg} = 0; 
+11     \hyperlink{class_jugador_a5bed10a21acb0c437828df282050b2ab}{sp} = 0; 
+12     \hyperlink{class_jugador_a53ac73c3dc720ca6e66406b309077472}{jg} = 0; 
+13     \hyperlink{class_jugador_a306eb04292a1aa300a39c2464c1368fd}{jp} = 0; 
+14 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_jugador_a69ab40db4a82c1b656895631b9949cbc}\label{class_jugador_a69ab40db4a82c1b656895631b9949cbc}} 
+\index{Jugador@{Jugador}!consultar\+\_\+pos@{consultar\+\_\+pos}}
+\index{consultar\+\_\+pos@{consultar\+\_\+pos}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{consultar\+\_\+pos()}{consultar\_pos()}}
+{\footnotesize\ttfamily int Jugador\+::consultar\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Indica la posicíon en el ranking del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es pos\+\_\+ranking $>$= 1 
+\end{DoxyPostcond}
+
+
+Definición en la línea 16 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+16                                 \{
+17     \textcolor{keywordflow}{return} \hyperlink{class_jugador_a200ee7c036d98654af6fab08b8b909e9}{pos\_ranking};
+18 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_af77bc217af6013d9e57cab34dd03921c}\label{class_jugador_af77bc217af6013d9e57cab34dd03921c}} 
+\index{Jugador@{Jugador}!modificar\+\_\+pos@{modificar\+\_\+pos}}
+\index{modificar\+\_\+pos@{modificar\+\_\+pos}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{modificar\+\_\+pos()}{modificar\_pos()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+pos (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Modifica la posición en el ranking del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+i es una posición entre 1 y P(número de jugadores) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es pos\+\_\+ranking = i 
+\end{DoxyPostcond}
+
+
+Definición en la línea 20 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+20                                 \{
+21     \hyperlink{class_jugador_a200ee7c036d98654af6fab08b8b909e9}{pos\_ranking} = i;
+22 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a241e7729a48da6c6d94ef51326a45a18}\label{class_jugador_a241e7729a48da6c6d94ef51326a45a18}} 
+\index{Jugador@{Jugador}!datos\+\_\+partido@{datos\+\_\+partido}}
+\index{datos\+\_\+partido@{datos\+\_\+partido}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{datos\+\_\+partido()}{datos\_partido()}}
+{\footnotesize\ttfamily void Jugador\+::datos\+\_\+partido (\begin{DoxyParamCaption}\item[{bool}]{ganado,  }\item[{int}]{setg,  }\item[{int}]{setp,  }\item[{int}]{juegog,  }\item[{int}]{juegop }\end{DoxyParamCaption})}
+
+
+
+Actualiza las estadísticas segun los datos de un partido. 
+
+\begin{DoxyPrecond}{Precondición}
+setg $>$= 0 setp $>$= 0 juegog $>$= 0 juegop $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito queda actualizado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 24 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+24                                                                                   \{
+25     \textcolor{keywordflow}{if} (ganado) ++\hyperlink{class_jugador_ab254a72417747985ffaf53b0508e5e31}{pg};
+26     \textcolor{keywordflow}{else} ++\hyperlink{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}{pp};
+27     \hyperlink{class_jugador_a678970fa93782e3e68f939c37fff5030}{sg} += setg;
+28     \hyperlink{class_jugador_a5bed10a21acb0c437828df282050b2ab}{sp} += setp;
+29     \hyperlink{class_jugador_a53ac73c3dc720ca6e66406b309077472}{jg} += juegog;
+30     \hyperlink{class_jugador_a306eb04292a1aa300a39c2464c1368fd}{jp} += juegop;
+31 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a5e1cd15a764a285556e35257209a2c8c}\label{class_jugador_a5e1cd15a764a285556e35257209a2c8c}} 
+\index{Jugador@{Jugador}!torneo\+\_\+disputado@{torneo\+\_\+disputado}}
+\index{torneo\+\_\+disputado@{torneo\+\_\+disputado}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{torneo\+\_\+disputado()}{torneo\_disputado()}}
+{\footnotesize\ttfamily void Jugador\+::torneo\+\_\+disputado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza los torneos disputados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+torneos += 1 
+\end{DoxyPostcond}
+
+
+Definición en la línea 33 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+33                               \{
+34     ++\hyperlink{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}{torneos};
+35 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a8bd81b77ba3d2e46bee69ea2f628f00d}\label{class_jugador_a8bd81b77ba3d2e46bee69ea2f628f00d}} 
+\index{Jugador@{Jugador}!imprimir\+\_\+stats@{imprimir\+\_\+stats}}
+\index{imprimir\+\_\+stats@{imprimir\+\_\+stats}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{imprimir\+\_\+stats()}{imprimir\_stats()}}
+{\footnotesize\ttfamily void Jugador\+::imprimir\+\_\+stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Imprime las estadísticas del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito por el canal estandar de salida los torneos disputados,número de partidos ganados y perdidos, número de sets ganados y perdidos, número de juegos ganados y perdidos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 37 del archivo Jugador.\+cc.
+
+
+\begin{DoxyCode}
+37                                   \{
+38     cout << \textcolor{stringliteral}{" Ts:"} << \hyperlink{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}{torneos} << \textcolor{stringliteral}{" WM:"} << \hyperlink{class_jugador_ab254a72417747985ffaf53b0508e5e31}{pg} << \textcolor{stringliteral}{" LM:"} << \hyperlink{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}{pp} << \textcolor{stringliteral}{" WS:"} 
+39          << \hyperlink{class_jugador_a678970fa93782e3e68f939c37fff5030}{sg} << \textcolor{stringliteral}{" LS:"} << \hyperlink{class_jugador_a5bed10a21acb0c437828df282050b2ab}{sp} << \textcolor{stringliteral}{" WG:"} << \hyperlink{class_jugador_a53ac73c3dc720ca6e66406b309077472}{jg} << \textcolor{stringliteral}{" LG:"} << \hyperlink{class_jugador_a306eb04292a1aa300a39c2464c1368fd}{jp} << endl;
+40 
+41 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_jugador_a200ee7c036d98654af6fab08b8b909e9}\label{class_jugador_a200ee7c036d98654af6fab08b8b909e9}} 
+\index{Jugador@{Jugador}!pos\+\_\+ranking@{pos\+\_\+ranking}}
+\index{pos\+\_\+ranking@{pos\+\_\+ranking}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{pos\+\_\+ranking}{pos\_ranking}}
+{\footnotesize\ttfamily int Jugador\+::pos\+\_\+ranking\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Posicíon en el ranking. 
+
+
+
+Definición en la línea 25 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}\label{class_jugador_a2c4256c69ddf76e1c4f1e48f56ed305c}} 
+\index{Jugador@{Jugador}!torneos@{torneos}}
+\index{torneos@{torneos}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{torneos}{torneos}}
+{\footnotesize\ttfamily int Jugador\+::torneos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de torneos disputados. 
+
+
+
+Definición en la línea 28 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_ab254a72417747985ffaf53b0508e5e31}\label{class_jugador_ab254a72417747985ffaf53b0508e5e31}} 
+\index{Jugador@{Jugador}!pg@{pg}}
+\index{pg@{pg}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{pg}{pg}}
+{\footnotesize\ttfamily int Jugador\+::pg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Partidos ganados. 
+
+
+
+Definición en la línea 31 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}\label{class_jugador_a90af14828909d3c5cd3fb4a285e96daf}} 
+\index{Jugador@{Jugador}!pp@{pp}}
+\index{pp@{pp}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{pp}{pp}}
+{\footnotesize\ttfamily int Jugador\+::pp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Partidos perdidos. 
+
+
+
+Definición en la línea 34 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a678970fa93782e3e68f939c37fff5030}\label{class_jugador_a678970fa93782e3e68f939c37fff5030}} 
+\index{Jugador@{Jugador}!sg@{sg}}
+\index{sg@{sg}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{sg}{sg}}
+{\footnotesize\ttfamily int Jugador\+::sg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets ganados. 
+
+
+
+Definición en la línea 37 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a5bed10a21acb0c437828df282050b2ab}\label{class_jugador_a5bed10a21acb0c437828df282050b2ab}} 
+\index{Jugador@{Jugador}!sp@{sp}}
+\index{sp@{sp}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{sp}{sp}}
+{\footnotesize\ttfamily int Jugador\+::sp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets perdidos. 
+
+
+
+Definición en la línea 40 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a53ac73c3dc720ca6e66406b309077472}\label{class_jugador_a53ac73c3dc720ca6e66406b309077472}} 
+\index{Jugador@{Jugador}!jg@{jg}}
+\index{jg@{jg}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{jg}{jg}}
+{\footnotesize\ttfamily int Jugador\+::jg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Juegos ganados. 
+
+
+
+Definición en la línea 43 del archivo Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a306eb04292a1aa300a39c2464c1368fd}\label{class_jugador_a306eb04292a1aa300a39c2464c1368fd}} 
+\index{Jugador@{Jugador}!jp@{jp}}
+\index{jp@{jp}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{jp}{jp}}
+{\footnotesize\ttfamily int Jugador\+::jp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Juegos perdidos. 
+
+
+
+Definición en la línea 46 del archivo Jugador.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_jugador_8hh}{Jugador.\+hh}\item 
+\hyperlink{_jugador_8cc}{Jugador.\+cc}\end{DoxyCompactItemize}

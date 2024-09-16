@@ -1,0 +1,144 @@
+\hypertarget{main_8cc}{}\section{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+
+
+Programa principal para la práctica.  
+
+
+Dependencia gráfica adjunta para main.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal para la práctica. 
+
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 20 del archivo main.\+cc.
+
+
+\begin{DoxyCode}
+20            \{
+21     \hyperlink{class_cjt__categorias}{Cjt\_categorias} cat;
+22     \hyperlink{class_cjt__jugadores}{Cjt\_jugadores} jug;
+23     \hyperlink{class_cjt__torneos}{Cjt\_torneos} tor;
+24     cat.\hyperlink{class_cjt__categorias_a25f0264b46b1c1de5af074bfae1ee5ed}{leer}();
+25     tor.\hyperlink{class_cjt__torneos_af0f18e3971687674b58d020689fa2203}{leer}();
+26     jug.\hyperlink{class_cjt__jugadores_a625e1ba48fc2f9b7c868820e1dc417f1}{leer}();
+27     \textcolor{keywordtype}{string} operacion;
+28     cin >> operacion;
+29     \textcolor{keywordflow}{while} ( operacion != \textcolor{stringliteral}{"fin"}) \{
+30         \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"nuevo jugador"} or operacion == \textcolor{stringliteral}{"nj"}) \{
+31             \textcolor{keywordtype}{string} nj;
+32             cin >> nj;
+33             \textcolor{keywordflow}{if} ( jug.\hyperlink{class_cjt__jugadores_a90a090845d242dd1f7dddf2d19467592}{existe}(nj)) \{
+34                 cout << \textcolor{stringliteral}{"error, el jugador "} << nj 
+35                      << \textcolor{stringliteral}{" ya pertenece al circuito"} << endl;
+36             \}
+37             \textcolor{keywordflow}{else} \{
+38                 jug.\hyperlink{class_cjt__jugadores_a99640dbf83c833ed484d1bc31a36ede1}{nuevo\_jugador}(nj);
+39             \}
+40         \}
+41         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"nuevo torneo"} or operacion == \textcolor{stringliteral}{"nt"}) \{
+42             \textcolor{keywordtype}{string} nt;
+43             \textcolor{keywordtype}{int} c;
+44             cin >> nt;
+45             cin >> c;
+46             \textcolor{keywordflow}{if} ( c < 1 or c > cat.\hyperlink{class_cjt__categorias_a8d99bf913eb3aaf562e5a086faaae517}{num\_categorias}()) \{
+47                 cout << \textcolor{stringliteral}{"no existe la categoria "} << c  << endl; 
+48             \}
+49             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tor.\hyperlink{class_cjt__torneos_a1c36520142bc446e3f0b2fb9701246c2}{existe}(nt)) \{
+50                 cout <<  \textcolor{stringliteral}{"error, el torneo "} << nt 
+51                      << \textcolor{stringliteral}{" ya pertenece al circuito"} << endl;
+52             \}
+53             \textcolor{keywordflow}{else}\{
+54                 tor.\hyperlink{class_cjt__torneos_a8e0f1049c3d772d63b3aefd885677ee3}{nuevo\_torneo}(nt,c);
+55             \}
+56         \}
+57         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"baja jugador"} or operacion == \textcolor{stringliteral}{"bj"}) \{
+58             \textcolor{keywordtype}{string} nj;
+59             cin >> nj;
+60             \textcolor{keywordflow}{if} ( not jug.\hyperlink{class_cjt__jugadores_a90a090845d242dd1f7dddf2d19467592}{existe}(nj)) \{
+61                 cout << \textcolor{stringliteral}{"error, el jugador "} << nj 
+62                      << \textcolor{stringliteral}{" no existe"} << endl;
+63             \}
+64             \textcolor{keywordflow}{else} \{
+65                 jug.\hyperlink{class_cjt__jugadores_ac0783e7a2a952975cd339f69cb040b30}{eliminar\_jugador}(nj);
+66                 jug.\hyperlink{class_cjt__jugadores_a4951d7691e67c44415fdcb3119dd4148}{num\_jugadores}();
+67             \}
+68         \}
+69         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"baja torneo"} or operacion == \textcolor{stringliteral}{"bt"}) \{
+70             \textcolor{keywordtype}{string} nt;
+71             cin >> nt;
+72             \textcolor{keywordflow}{if} ( not tor.\hyperlink{class_cjt__torneos_a1c36520142bc446e3f0b2fb9701246c2}{existe}(nt)) \{
+73                 cout << \textcolor{stringliteral}{"error, el torneo "} << nt 
+74                      << \textcolor{stringliteral}{" no pertenece al circuito"} << endl;
+75             \}
+76             \textcolor{keywordflow}{else} \{
+77                 tor.\hyperlink{class_cjt__torneos_aa4a23ce93b31fe6c29b9b3a1fee2393a}{eliminar\_torneo}(nt);
+78                 tor.\hyperlink{class_cjt__torneos_aba6d57df308bdbfa173578c108e19b82}{num\_torneos}();
+79             \}
+80         \}
+81         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"iniciar torneo"} or operacion == \textcolor{stringliteral}{"it"})\{
+82             \textcolor{keywordtype}{string} nt;
+83             cin >> nt;
+84             \textcolor{keywordflow}{if} ( not tor.\hyperlink{class_cjt__torneos_a1c36520142bc446e3f0b2fb9701246c2}{existe}(nt)) \{
+85                 cout << \textcolor{stringliteral}{"error, el torneo "} << nt 
+86                      << \textcolor{stringliteral}{" no se puede iniciar porque no existe"} << endl; 
+87             \}
+88             \textcolor{keywordflow}{else} \{
+89                 \textcolor{keywordtype}{int} num\_jugadores;
+90                 cin >> num\_jugadores;
+91                 tor.\hyperlink{class_cjt__torneos_a6b77c538bd9a25a0ec6563849736e6d6}{iniciar\_torneo}( nt, num\_jugadores);
+92             \}
+93         \}
+94         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"finalizar torneo"} or operacion == \textcolor{stringliteral}{"ft"})\{
+95             \textcolor{keywordtype}{string} nt;
+96             cin >> nt;
+97             \textcolor{keywordflow}{if} ( not tor.\hyperlink{class_cjt__torneos_a1c36520142bc446e3f0b2fb9701246c2}{existe}(nt))\{
+98                  cout << \textcolor{stringliteral}{"Error, el torneo "} << nt 
+99                      << \textcolor{stringliteral}{" no se puede finalizar porque no existe"} << endl;
+100 
+101             \}
+102             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( not tor.\hyperlink{class_cjt__torneos_a5ba68f778eee8e1050a7f0916755dfa0}{comenzado}(nt))\{
+103                 cout << \textcolor{stringliteral}{"El torneo "} << nt << \textcolor{stringliteral}{" no ha comenzado"} << endl;
+104             \}
+105             \textcolor{keywordflow}{else} \{
+106                 tor.\hyperlink{class_cjt__torneos_aa61972563342ca00b87a3c9b0ea78b6c}{resultados\_torneo}(nt);
+107             \}
+108 
+109         \}
+110         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"listar ranking"} or operacion == \textcolor{stringliteral}{"lr"})\{
+111             jug.\hyperlink{class_cjt__jugadores_a2eca08ea3674049547e6eb6242da1df5}{imprimir\_ranking}();
+112         \}
+113         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"listar jugadores"} or operacion == \textcolor{stringliteral}{"lj"})\{
+114             jug.\hyperlink{class_cjt__jugadores_aeeb65f2beec6cac01abf0135b37dd104}{imprimir\_lista\_jugadores}();
+115         \}
+116         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"listar torneos"} or operacion == \textcolor{stringliteral}{"lt"})\{
+117             tor.\hyperlink{class_cjt__torneos_aeaa059c6509b254de82f218f09ff9e3e}{imprimir\_lista\_torneos}();
+118         \}
+119         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"listar categorias"} or operacion == \textcolor{stringliteral}{"lc"})\{
+120             cat.\hyperlink{class_cjt__categorias_acd18a2fe2b4336dd5faa7e418962d713}{imprimir\_categorias}();
+121         \}
+122     \}
+123 \}
+\end{DoxyCode}

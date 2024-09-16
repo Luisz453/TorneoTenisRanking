@@ -1,0 +1,56 @@
+4 8
+Grand_Slam
+Masters_1000
+ATP_500
+ATP_250
+2000 1000 500 250 125 60 30 15
+1000  500 250 125  60 30 15 10
+ 500  250 125  60  30 15  0  0
+ 250  125  60  30  15  0  0  0
+6
+BBVA 1
+Premier 2
+Bundesleague 4
+Ligue_1 1
+Fib 1
+Estbb 3
+10
+Messi
+Ronaldo
+Zidane
+Eto
+Kroos
+Benzema
+Pedri
+Mbappe
+Ramos
+Kounde
+iniciar_torneo Fib
+8
+ 1 2 3 4 5 6 7 8  
+nuevo_jugador Alex
+nt Fib 1
+bt Fib
+lr
+nt Fib 4
+it Fib
+8
+ 1 2 3 4 5 6 7 8
+ft Fib
+6-4,2-6,7-6
+6-4,6-3
+1-0
+0 0
+6-4,2-6,6-4
+0 0
+6-4,6-0
+6-0,6-4
+0 0
+1-0
+0 0
+lr
+bt Fib
+lr
+listar_torneos
+fin
+

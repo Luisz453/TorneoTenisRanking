@@ -1,0 +1,120 @@
+\hypertarget{class_torneo}{}\section{Referencia de la Clase Torneo}
+\label{class_torneo}\index{Torneo@{Torneo}}
+
+
+Representa un torneo del circuito.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_torneo_a7bf6d35a7ec8d0e13a0bed8deb8add3e}{Torneo} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \hyperlink{class_torneo_a7a935f50cc04d337daaddad8adf9e9a2}{cuadro\+\_\+emparajamientos} (int nj)
+\begin{DoxyCompactList}\small\item\em Confecciona e imprime el cuadro de emparejamientos. \end{DoxyCompactList}\item 
+void \hyperlink{class_torneo_ab0e77986392e1b733fae7da2c335208c}{cuadro\+\_\+resultados} (int nj)
+\begin{DoxyCompactList}\small\item\em Confecciona e imprime el cuadro de resultados. \end{DoxyCompactList}\item 
+void \hyperlink{class_torneo_a2fcaaf52de27aca302d1341b70008f1e}{inscritos\+\_\+edicion\+\_\+actual} (int nj)
+\begin{DoxyCompactList}\small\item\em Se realiza la lista de inscritos en la edición actual. \end{DoxyCompactList}\item 
+void \hyperlink{class_torneo_ac1fd79d2aa1de8c3a3f29355b21c2ecb}{inscritos\+\_\+edicion\+\_\+anterior} (vector$<$ string $>$ jugadores)
+\begin{DoxyCompactList}\small\item\em Se realiza la lista de inscritos al acabar una edición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un torneo del circuito. 
+
+Un torneo pertenece a una categoría determinada, tiene un número determinado de participantes que se emparejarán según su posición en el ranking 
+
+Definición en la línea 24 del archivo Torneo.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_torneo_a7bf6d35a7ec8d0e13a0bed8deb8add3e}\label{class_torneo_a7bf6d35a7ec8d0e13a0bed8deb8add3e}} 
+\index{Torneo@{Torneo}!Torneo@{Torneo}}
+\index{Torneo@{Torneo}!Torneo@{Torneo}}
+\subsubsection{\texorpdfstring{Torneo()}{Torneo()}}
+{\footnotesize\ttfamily Torneo\+::\+Torneo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Categoría a la que pertenece mediante un número entero entre 1 y el númenro de categorias Conjunto de jugadores inscritos en la edición anterior Conjunto de jugadores inscritos en la edición actual Emparejamientos de los jugadores Resultados de los emparajamientos Si se ha iniciado o no\+Se ejecuta automáticamente al declarar un torneo. \begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un \hyperlink{class_torneo}{Torneo} con un identificador que indica la categoría 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_torneo_a7a935f50cc04d337daaddad8adf9e9a2}\label{class_torneo_a7a935f50cc04d337daaddad8adf9e9a2}} 
+\index{Torneo@{Torneo}!cuadro\+\_\+emparajamientos@{cuadro\+\_\+emparajamientos}}
+\index{cuadro\+\_\+emparajamientos@{cuadro\+\_\+emparajamientos}!Torneo@{Torneo}}
+\subsubsection{\texorpdfstring{cuadro\+\_\+emparajamientos()}{cuadro\_emparajamientos()}}
+{\footnotesize\ttfamily void Torneo\+::cuadro\+\_\+emparajamientos (\begin{DoxyParamCaption}\item[{int}]{nj }\end{DoxyParamCaption})}
+
+
+
+Confecciona e imprime el cuadro de emparejamientos. 
+
+\begin{DoxyPrecond}{Precondición}
+8 $<$= nj $<$= 2$^\wedge$(max\+\_\+nivel -\/ 1) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Confecciona el cuadro de emparejamientos según un criterio específico y lo imprime 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_torneo_ab0e77986392e1b733fae7da2c335208c}\label{class_torneo_ab0e77986392e1b733fae7da2c335208c}} 
+\index{Torneo@{Torneo}!cuadro\+\_\+resultados@{cuadro\+\_\+resultados}}
+\index{cuadro\+\_\+resultados@{cuadro\+\_\+resultados}!Torneo@{Torneo}}
+\subsubsection{\texorpdfstring{cuadro\+\_\+resultados()}{cuadro\_resultados()}}
+{\footnotesize\ttfamily void Torneo\+::cuadro\+\_\+resultados (\begin{DoxyParamCaption}\item[{int}]{nj }\end{DoxyParamCaption})}
+
+
+
+Confecciona e imprime el cuadro de resultados. 
+
+\begin{DoxyPrecond}{Precondición}
+El torneo esta finalizado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Confecciona el cuadro de resultados y lo imprime 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_torneo_a2fcaaf52de27aca302d1341b70008f1e}\label{class_torneo_a2fcaaf52de27aca302d1341b70008f1e}} 
+\index{Torneo@{Torneo}!inscritos\+\_\+edicion\+\_\+actual@{inscritos\+\_\+edicion\+\_\+actual}}
+\index{inscritos\+\_\+edicion\+\_\+actual@{inscritos\+\_\+edicion\+\_\+actual}!Torneo@{Torneo}}
+\subsubsection{\texorpdfstring{inscritos\+\_\+edicion\+\_\+actual()}{inscritos\_edicion\_actual()}}
+{\footnotesize\ttfamily void Torneo\+::inscritos\+\_\+edicion\+\_\+actual (\begin{DoxyParamCaption}\item[{int}]{nj }\end{DoxyParamCaption})}
+
+
+
+Se realiza la lista de inscritos en la edición actual. 
+
+\begin{DoxyPrecond}{Precondición}
+8 $<$= nj $<$= 2$^\wedge$(max\+\_\+nivel -\/ 1), y las posiciones de los jugadores en el ranking 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Confecciona la lista de inscritos en la edicíon actual con sus nombres 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_torneo_ac1fd79d2aa1de8c3a3f29355b21c2ecb}\label{class_torneo_ac1fd79d2aa1de8c3a3f29355b21c2ecb}} 
+\index{Torneo@{Torneo}!inscritos\+\_\+edicion\+\_\+anterior@{inscritos\+\_\+edicion\+\_\+anterior}}
+\index{inscritos\+\_\+edicion\+\_\+anterior@{inscritos\+\_\+edicion\+\_\+anterior}!Torneo@{Torneo}}
+\subsubsection{\texorpdfstring{inscritos\+\_\+edicion\+\_\+anterior()}{inscritos\_edicion\_anterior()}}
+{\footnotesize\ttfamily void Torneo\+::inscritos\+\_\+edicion\+\_\+anterior (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{jugadores }\end{DoxyParamCaption})}
+
+
+
+Se realiza la lista de inscritos al acabar una edición. 
+
+\begin{DoxyPrecond}{Precondición}
+\hyperlink{class_torneo}{Torneo} ha finalizado, jugaadores no vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Copia la lista de jugadores inscritos al acbar el torneo 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_torneo_8hh}{Torneo.\+hh}\end{DoxyCompactItemize}
